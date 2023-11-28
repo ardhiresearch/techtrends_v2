@@ -44,4 +44,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ardhiresearch/techtrends-web:v.1.0.0
+          tags: ardhian09/techtrends-web:v.1.0.0
