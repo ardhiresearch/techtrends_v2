@@ -1,0 +1,42 @@
+namespace:
+  name: sandbox
+ 
+service:
+  port: 4111
+  targetPort: 3111
+  protocol: TCP
+  type: ClusterIP
+
+image:
+  repository: ardhian09/techtrends:v1.0.0
+  tag: techtrends
+  pullPolicy: IfNotPresent
+
+replicaCount: 1
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 256Mi
+  limits:
+    cpu: 100m
+    memory: 500Mi
+    
+ports: 
+    - containerPort: 3111
+      protocol: TCP
+  
+livenessProbe:
+    httpGet:
+        path: /healthz
+        port: 3111
+    initialDelaySeconds: 3
+    periodSeconds: 3
+readinessProbe:
+    httpGet:
+        path: /healthz
+        port: 3111
+    initialDelaySeconds: 3
+    periodSeconds: 3
+    
+
