@@ -1,0 +1,9 @@
+apiVersion: v1
+name: techtrends
+description: deploy techtrends web to multiple environment
+keywords:
+- techtrends
+version: 1.0.0
+maintainers:
+- name: ardhianto 
+  email: ardhi.research@gmail.com 
