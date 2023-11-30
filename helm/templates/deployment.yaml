@@ -4,7 +4,7 @@ metadata:
   labels:
     app: techtrends-web
     tag: techtrends-web
-  name: techtrend
+  name: {{ .Values.name }}
   namespace: {{ .Values.namespace.name }} 
 spec:
   replicas: {{ .Values.replicaCount }} 
