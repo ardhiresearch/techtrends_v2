@@ -8,8 +8,8 @@ service:
   type: ClusterIP
 
 image:
-  repository: ardhian09/techtrends:v1.0.0
-  tag: techtrends
+  repository: ardhian09/techtrends
+  tag: v1.0.0
   pullPolicy: Always
 
 replicaCount: 5
