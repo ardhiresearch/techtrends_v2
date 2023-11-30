@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: techtrends-web
+    tag: techtrends-web
+  name: techtrend
+  namespace: {{ .Values.namespace.name }} 
+spec:
+  replicas: {{ .Values.replicaCount }} 
+  selector:
+    matchLabels:
+      app: techtrends-web
+      tag: techtrends-web
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: techtrends-web
+        tag: techtrends-web
+    spec:
+      containers:
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        name: techtrends
+        
+      ports: 
+{{ toYaml .Values.port | indent 12 }}
+          
+      livenessProbe:
+{{ toYaml .Values.livenessProbe | indent 12 }}
+      
+      readinessProbe:
+{{ toYaml .Values.readinessProbe | indent 12 }}
+        
+      resources:
+{{ toYaml .Values.resources | indent 12 }}
