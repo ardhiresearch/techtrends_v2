@@ -8,19 +8,19 @@ service:
   type: ClusterIP
 
 image:
-  repository: ardhian09/techtrends:v1.0.0
-  tag: techtrends
+  repository: ardhian09/techtrends
+  tag: latest
   pullPolicy: IfNotPresent
 
 replicaCount: 1
 
 resources:
   requests:
-    cpu: 50m
-    memory: 256Mi
+    cpu: 250m
+    memory: 64Mi
   limits:
-    cpu: 100m
-    memory: 500Mi
+    cpu: 500m
+    memory: 128Mi
     
 ports: 
     - containerPort: 3111
