@@ -25,21 +25,22 @@ resources:
     memory: 256Mi
     
 ports: 
-    - containerPort: 3111
-      protocol: TCP
+  - containerPort: 3111
+    protocol: TCP
   
 livenessProbe:
-    httpGet:
-        path: /healthz
-        port: 3111
-    initialDelaySeconds: 3
-    periodSeconds: 3
+  httpGet:
+    path: /healthz
+    port: 3111
+  initialDelaySeconds: 3
+  periodSeconds: 3
+
 readinessProbe:
-    httpGet:
-        path: /healthz
-        port: 3111
-    initialDelaySeconds: 3
-    periodSeconds: 3
+  httpGet:
+    path: /healthz
+    port: 3111
+  initialDelaySeconds: 3
+  periodSeconds: 3
     
 
 
