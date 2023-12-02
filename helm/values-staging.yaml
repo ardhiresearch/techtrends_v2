@@ -10,7 +10,7 @@ service:
   type: ClusterIP
 
 image:
-  repository: ardhian09/techtrends/
+  repository: ardhian09/techtrends
   tag: v1.0.0
   pullPolicy: IfNotPresent
 
