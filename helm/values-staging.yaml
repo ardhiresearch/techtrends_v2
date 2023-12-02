@@ -18,11 +18,11 @@ replicaCount: 3
 
 resources:
   requests:
-    cpu: 0.3
-    memory: 0.090
+    cpu: 300m
+    memory: 90Mi
   limits:
-    cpu: 0.5
-    memory: 0.128
+    cpu: 500m
+    memory: 128Mi
     
 ports: 
     - containerPort: 3111
