@@ -19,8 +19,8 @@ spec:
         - name: {{ .Values.name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
-            - containerPort: {{ .Values.ports[0].containerPort }}
-              protocol: {{ .Values.ports[0].protocol }}
+            - containerPort: {{ .Values.ports.containerPort }}
+              protocol: {{ .Values.ports.protocol }}
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}
