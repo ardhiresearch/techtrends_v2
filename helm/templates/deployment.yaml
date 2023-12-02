@@ -29,13 +29,13 @@ spec:
         name: techtrends
         
       ports: 
-{{ toYaml .Values.port | indent 12 }}
+{{ toYaml .Values.port | indent 5 }}
           
       livenessProbe:
-{{ toYaml .Values.livenessProbe | indent 12 }}
+{{ toYaml .Values.livenessProbe | indent 5 }}
       
       readinessProbe:
-{{ toYaml .Values.readinessProbe | indent 12 }}
+{{ toYaml .Values.readinessProbe | indent 5 }}
         
       resources:
-{{ toYaml .Values.resources | indent 12 }}
+{{ toYaml .Values.resources | indent 2 }}
