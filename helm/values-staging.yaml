@@ -25,11 +25,11 @@ resources:
     memory: 128Mi
     
 ports: 
-    - containerPort: 3111
-      protocol: TCP
+     - containerPort: 3111
+       protocol: TCP
   
 livenessProbe:
-    httpGet:
+     httpGet:
         path: /healthz
         port: 3111
 
