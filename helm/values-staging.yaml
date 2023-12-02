@@ -9,18 +9,18 @@ service:
 
 image:
   repository: ardhian09/techtrends
-  tag: v1.0.0
+  tag: latest
   pullPolicy: IfNotPresent
 
 replicaCount: 3
 
 resources:
   requests:
-    cpu: 90m
-    memory: 300Mi
+    cpu: 300m
+    memory: 90Mi
   limits:
-    cpu: 128m
-    memory: 500Mi
+    cpu: 500m
+    memory: 128Mi
     
 ports: 
     - containerPort: 3111
