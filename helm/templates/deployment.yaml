@@ -32,10 +32,10 @@ spec:
 {{ toYaml .Values.port | indent 11 }}
           
       livenessProbe:
-{{ toYaml .Values.livenessProbe | indent 5 }}
+{{ toYaml .Values.livenessProbe | indent 11 }}
       
       readinessProbe:
-{{ toYaml .Values.readinessProbe | indent 5 }}
+{{ toYaml .Values.readinessProbe | indent 11 }}
         
       resources:
-{{ toYaml .Values.resources | indent 2 }}
+{{ toYaml .Values.resources | indent 7 }}
